@@ -39,14 +39,36 @@
 
         let goldenClass = 'golden';
 
-        firstStar.addEventListener('mouseover', function() {
+        secondStar.addEventListener('mouseover', function() {
             if (!firstStar.classList.contains('goldenClass')) {
                 firstStar.classList.add(goldenClass);
             }
+            if (!secondStar.classList.contains('goldenClass')) {
+                secondStar.classList.add(goldenClass);
+            }
+            firstStar.style.color;
+            secondStar.style.color;
         });
 
-        firstStar.addEventListener('mouseout', function() {
+        thirdStar.addEventListener('mouseover', function() {
+            // secondStar.classList.add(goldenClass);
+            // thirdStar.classList.add(goldenClass);
+            if(!(secondStar.classList.contains(goldenClass) && thirdStar.classList.contains(goldenClass))) {
+                secondStar.classList.add(goldenClass);
+                thirdStar.classList.add(goldenClass);
+            }
+            secondStar.style.color;
+            thirdStar.style.color;
+        })
+
+        secondStar.addEventListener('mouseout', function() {
             firstStar.classList.remove(goldenClass);
+            secondStar.classList.remove(goldenClass);
+        });
+
+        thirdStar.addEventListener('mouseout', function() {
+            secondStar.classList.remove(goldenClass);
+            thirdStar.classList.remove(goldenClass);
         });
     </script>
 </body>
