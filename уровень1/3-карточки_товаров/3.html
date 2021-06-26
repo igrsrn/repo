@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="product">
+        <div class="productName">Товар 1</div>
+        <img src="images/1.jpg" alt="">
+        <button>В корзину</button>
+    </div>
+    <div class="product">
+        <div class="productName">Товар 1</div>
+        <img src="images/1.jpg" alt="">
+        <button>В корзину</button>
+    </div>
+    <div class="product">
+        <div class="productName">Товар 1</div>
+        <img src="images/1.jpg" alt="">
+        <button>В корзину</button>
+    </div>
+
+
+    <script>
+        let div = document.querySelectorAll('.product');
+        div.forEach(function(product){
+            product.style.backgroundColor = 'blueviolet';
+        });
+        
+        let text = document.querySelectorAll('.productName');
+        text.forEach(function(name) {
+            name.style.fontSize = '24px';
+        });
+
+        console.dir(div[0]);
+    </script>
+</body>
+</html>
